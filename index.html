@@ -260,6 +260,16 @@ body {
     <tr><td>gzip -9</td><td>~91%</td><td>—</td><td>✓</td></tr>
     <tr><td>zstd -19</td><td>93.4%</td><td>—</td><td>✓</td></tr>
   </table>
+  <p style="max-width:720px; margin-top:36px;">
+    <span style="color:var(--gold)">REAL DATA — 476 MB of live LUWONODE telemetry, 868k records from a sovereign trading node. Same engine, no retuning:</span>
+  </p>
+  <table class="bench-table">
+    <tr><th>ENGINE</th><th>REDUCTION</th><th>THROUGHPUT</th><th>LOSSLESS</th></tr>
+    <tr><td>LUWO-V7 (v0.3 entropy stage)</td><td style="color:var(--gold)"><strong>93.0%</strong></td><td>5.4 MB/s</td><td>✓ beats zstd-22</td></tr>
+    <tr><td>zstd -22 (max level)</td><td>92.5%</td><td>2.3 MB/s</td><td>✓</td></tr>
+    <tr><td>zstd -19</td><td>92.4%</td><td>4.4 MB/s</td><td>✓</td></tr>
+    <tr><td>gzip -9</td><td>89.8%</td><td>—</td><td>✓</td></tr>
+  </table>
   <p style="max-width:720px; color:#888; font-size:14px; margin-top:24px;">
     No inflated claims — the numbers above are the numbers stamped in the provenance ledger, nothing else.
     The engine iterates weekly. Roadmap: Solana on-chain compression receipts, persistent trained dictionaries, real-corpus benchmarks.
